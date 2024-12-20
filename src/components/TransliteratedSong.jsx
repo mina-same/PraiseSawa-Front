@@ -12,7 +12,7 @@ const TransliteratedSong = ({ song: arSong }) => {
     const fetchSong = async () => {
       try {
         const response = await axios.get(
-          `/api/FrankSongs/getFrankSongBySongID/${songID}`
+          `${process.env.REACT_APP_API_BASE_URL}/api/FrankSongs/getFrankSongBySongID/${songID}`
         );
         setSong(response.data);
       } catch (error) {
