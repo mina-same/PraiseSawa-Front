@@ -18,9 +18,9 @@ const Overview = ({ song }) => {
       try {
         const [arSongResponse, transliterationResponse, translationResponse] =
           await Promise.all([
-            axios.get(`/api/ArbSongs/getArbSongBySongID/${songID}`),
-            axios.get(`/api/FrankSongs/getFrankSongBySongID/${songID}`),
-            axios.get(`/api/ArbSongs/translateToEnglish/${songID}`),
+            axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/ArbSongs/getArbSongBySongID/${songID}`),
+            axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/FrankSongs/getFrankSongBySongID/${songID}`),
+            axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/ArbSongs/translateToEnglish/${songID}`),
           ]);
 
         setArSong(arSongResponse.data);
