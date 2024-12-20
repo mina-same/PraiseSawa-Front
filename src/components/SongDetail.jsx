@@ -20,7 +20,7 @@ const SongDetail = () => {
   useEffect(() => {
     const fetchSong = async () => {
       try {
-        const response = await axios.get(`/api/ArbSongs/getArbSongBySongID/${id}`);
+        const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/ArbSongs/getArbSongBySongID/${id}`);
         setSong(response.data);
         setLoading(false);
       } catch (err) {
