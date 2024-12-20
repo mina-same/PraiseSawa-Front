@@ -14,7 +14,7 @@ const TranslatedSong = ({ song }) => {
   useEffect(() => {
     const fetchTranslatedSong = async () => {
       try {
-        const response = await axios.get(`/api/ArbSongs/translateToEnglish/${songID}`);
+        const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/ArbSongs/translateToEnglish/${songID}`);
         setEnglishSong(response.data);
       } catch (error) {
         console.error("Error translating song:", error);
