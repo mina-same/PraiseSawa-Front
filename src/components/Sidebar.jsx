@@ -55,7 +55,7 @@ const Sidebar = () => {
       {/* Footer */}
       <div className='text-[15px] mb-3 text-center'>
         <div className='border border-[#D9D9D9] mb-3'/>
-        © 2024 Praise Melodies
+        © 2024 PraiseSawa
       </div>
     </div>
   );
